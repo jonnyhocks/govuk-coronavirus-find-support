@@ -3,6 +3,11 @@
 require "spec_helper"
 
 RSpec.feature "Fill in the form" do
+  scenario "Fill in the form without Javascript" do
+    given_a_person_needing_to_find_support_during_covid19_pandemic
+    who_is_worried_about_everything
+  end
+
   scenario "Ensure we can perform a healthcheck" do
     visit healthcheck_path
 
