@@ -3,10 +3,34 @@ RSpec.describe "data-export" do
   let(:end_date) { "2020-04-15" }
 
   before do
-    FormResponse.create(form_response: { able_to_leave: "Yes", get_food: "Yes" }, created_at: "2020-04-10 10:00:00")
-    FormResponse.create(form_response: { able_to_leave: "Yes", get_food: "No" }, created_at: "2020-04-10 10:00:00")
-    FormResponse.create(form_response: { able_to_leave: "Yes", get_food: "Yes" }, created_at: "2020-04-11 10:00:00")
-    FormResponse.create(form_response: { able_to_leave: "No", get_food: "No" }, created_at: "2020-04-11 10:00:00")
+    FormResponse.create(
+      form_response: {
+       able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
+       get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
+      },
+      created_at: "2020-04-10 10:00:00"
+     )
+    FormResponse.create(
+      form_response: {
+        able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
+        get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
+      },
+      created_at: "2020-04-10 10:00:00"
+    )
+    FormResponse.create(
+      form_response: {
+        able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
+        get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
+      },
+      created_at: "2020-04-11 10:00:00"
+    )
+    FormResponse.create(
+      form_response: {
+        able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_other.label"),
+        get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
+      },
+      created_at: "2020-04-11 10:00:00"
+    )
   end
 
   describe "GET /able-to-leave" do
