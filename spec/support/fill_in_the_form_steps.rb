@@ -84,6 +84,14 @@ module FillInTheFormSteps
     click_on "Continue"
   end
 
+  def and_is_not_self_employed_or_a_sole_trader
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
+
+    choose "No"
+
+    click_on "Continue"
+  end
+
   def and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
     expect(page).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.title"))
 
@@ -142,10 +150,13 @@ module FillInTheFormSteps
     expect(page).to have_content(I18n.t("results_link.getting_food.get_food.title"))
   end
 
+  def they_are_provided_with_information_about_being_self_employed
+    expect(page).to have_content(I18n.t("results_link.being_unemployed.self_employed.title"))
+  end
+
   def they_are_provided_with_information_about_being_unemployed
     expect(page).to have_content(I18n.t("results_link.being_unemployed.have_you_been_made_unemployed.title"))
     expect(page).to have_content(I18n.t("results_link.being_unemployed.are_you_off_work_ill.title"))
-    expect(page).to have_content(I18n.t("results_link.being_unemployed.self_employed.title"))
   end
 
   def they_are_provided_with_information_about_going_in_to_work
