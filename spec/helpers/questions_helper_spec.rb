@@ -46,4 +46,10 @@ RSpec.describe QuestionsHelper, type: :helper do
       expect(helper.previous_question("able_to_leave")).to eq("question_2")
     end
   end
+
+  describe "#remove_questions" do
+    it "removes all questions from array" do
+      expect(helper.remove_questions(%w(question_1))).to eq(%w(question_2))
+    end
+  end
 end

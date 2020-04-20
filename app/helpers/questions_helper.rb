@@ -48,4 +48,12 @@ module QuestionsHelper
   def last_question_seen?
     session[FINAL_QUESTION.to_sym].present?
   end
+
+  def remove_questions(questions)
+    updated_questions_to_ask = questions_to_ask
+    questions.each do |question|
+      updated_questions_to_ask.delete(question)
+    end
+    updated_questions_to_ask
+  end
 end
