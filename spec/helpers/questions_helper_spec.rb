@@ -52,4 +52,14 @@ RSpec.describe QuestionsHelper, type: :helper do
       expect(helper.remove_questions(%w(question_1))).to eq(%w(question_2))
     end
   end
+
+  describe "#add_questions" do
+    it "adds all questions from array when question not already in array" do
+      expect(helper.add_questions(%w(question_3 question_4), "question_1")).to eq(%w(question_1 question_3 question_4 question_2))
+    end
+
+    it "does not add question when question already in array" do
+      expect(helper.add_questions(%w(question_2), "question_1")).to eq(%w(question_1 question_2))
+    end
+  end
 end

@@ -56,4 +56,13 @@ module QuestionsHelper
     end
     updated_questions_to_ask
   end
+
+  def add_questions(questions, after_question)
+    updated_questions_to_ask = questions_to_ask
+    questions.each do |question|
+      updated_questions_to_ask.insert(updated_questions_to_ask.index(after_question) + 1, question) unless updated_questions_to_ask.include?(question)
+      after_question = question
+    end
+    updated_questions_to_ask
+  end
 end
