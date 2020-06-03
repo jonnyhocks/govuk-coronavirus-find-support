@@ -385,7 +385,7 @@
                 option_high_risk:
                   label: "I should not leave home because I think I’m at risk of severe illness from coronavirus"
                 option_disability:
-                  label: "I cannot go out because I have a disability"
+                  label: "I can’t go out because of my impairment or health condition"
                 option_other:
                   label: "I’m unable to leave my home for another reason"
               custom_select_error: "Select if you’re able to leave your home or not"
@@ -640,3 +640,9 @@
             - id: "0055"
               text: "Information on coronavirus and your wellbeing from Mind"
               href: "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8"
+            - id: "0056"
+              text: "Get online support via the Young Person’s Mental Health Toolkit"
+              href: "https://hwb.gov.wales/repository/discovery/resource/e53adf44-76cb-4635-b6c2-62116bb63a9a/en?fields=resources&query=mental%20health&sort=recommendation"
+            - id: "0057"
+              text: "Access a free educational resource on children and young people’s mental health"
+              href: "https://www.minded.org.uk/"
