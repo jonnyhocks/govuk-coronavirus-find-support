@@ -223,7 +223,7 @@
                 - "Ddim yn siŵr"
               custom_select_error: "Dewiswch beth y mae angen cymorth arnoch gydag ef, neu ‘Ddim yn siŵr’"
         feeling_unsafe:
-          title: "Ddim yn teimlo’n ddiogel lle’r ydych yn byw, neu beth i’w wneud os ydych yn poeni ynghylch diogelwch oedolyn neu blentyn arall"
+          title: "Os nad ydych yn teimlo’n ddiogel lle rydych yn byw neu’ch bod yn poeni am rywun arall"
           questions:
             feel_safe:
               title: "Ydych chi’n teimlo’n ddiogel lle rydych yn byw?"
@@ -411,6 +411,9 @@
               text: "Os ydych mewn perygl uniongyrchol ffoniwch 999 a gofyn am yr Heddlu"
             - id: "0002"
               text: "Os ydych mewn perygl ac yn methu â siarad ar y ffôn, ffoniwch 999 ac yna pwyso 55."
+            - id: "0058"
+              text: "Sut i roi gwybod am amheuaeth o gam-drin, niwed, neu esgeulustod (diogelu pobl)"
+              href: "https://llyw.cymru/sut-i-roi-gwybod-am-amheuaeth-o-gam-drin-niwed-neu-esgeulustod-diogelu-pobl"
             - id: "0003"
               text: "Os ydych yn blentyn, gallwch gael help gan Childline"
               href: "https://www.childline.org.uk/get-support/contacting-childline/contacting-childline-in-welsh/#siaradachildlineyngymraeg"
@@ -641,3 +644,4 @@
             - id: "0057"
               text: "Mae adnodd addysgol am ddim ar gael ar-lein ynglŷn ag iechyd meddwl plant a phobl ifanc"
               href: "https://www.minded.org.uk/"
+            # - id: "0058" has been added after entry "0002"
