@@ -5,6 +5,7 @@
 //= require analytics
 //= require analytics-enhancedEcommerce
 //= require cookies
+//= require components/escape-link
 //= require govwales/global
 window.CookieSettings.start()
 window.GOVUK.analyticsInit()
