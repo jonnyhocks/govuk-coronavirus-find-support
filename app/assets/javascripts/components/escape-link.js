@@ -18,9 +18,9 @@ EscapeLink.prototype.handleClick = function (event) {
 
   var url = event.target.getAttribute('href');
   var rel = event.target.getAttribute('rel');
-  var trackLabel = event.target.getAttribute('data-track-label');
+  // var trackLabel = event.target.getAttribute('data-track-label');
 
-  this.trackLink(trackLabel);
+  // this.trackLink(trackLabel);
   this.openNewPage(url, rel);
   this.replaceCurrentPage(url);
 };

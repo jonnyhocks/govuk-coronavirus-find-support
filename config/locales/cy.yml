@@ -148,7 +148,7 @@
         <p>Efallai eich bod yn gweld y dudalen hon oherwydd eich bod wedi gwrthod cwcis yn eich porwr. Bydd angen ichi dderbyn <a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external" target="_blank">dderbyn cwcis</a> cyn ichi allu defnyddio’r gwasanaeth hwn.</p>
     leave_this_website:
       link_text: "Gadael y safle"
-      link_href: "/clear-session?ext_r=true"
+      link_href: "/clirio-sesiwn?ext_r=true"
       link_redirect_to: "https://www.bbc.co.uk/"
     get_help_from_nhs:
       title: "Not applicable"
