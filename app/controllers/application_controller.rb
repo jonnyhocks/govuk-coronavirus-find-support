@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   before_action -> { request.variant = :govwales }
+  before_action :set_cache_headers
   around_action :set_locale_from_url
 
 private
@@ -76,5 +77,11 @@ private
 
   def check_session_exists
     session_expired unless last_question_seen?
+  end
+
+  def set_cache_headers
+    response.headers["Cache-Control"] = "no-cache, no-store"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "Mon, 01 Jan 1990 00:00:00 GMT"
   end
 end
